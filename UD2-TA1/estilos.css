@@ -1,0 +1,85 @@
+/* GENERAL */
+*{margin:0; padding:0; border: border-box;}
+body {
+    background:#fffffa;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    width:100%;
+}
+header {
+    background: #fffffa;
+    width: 100%;
+    /* clear: both;
+    display: table;
+    esto no tiene sentido para header ya que se aplicaría a todos*/
+}
+
+.titulos {
+    clear: both;
+    text-align: center;
+}
+
+/* CABECERA */
+
+.cabecera{
+    /* width: 900px; mejor usar % o usar max-width*/
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* mucho cuidado con poner una regla para un elemento sin indicar concretamente cual, tu tenías puesto tanto para img 
+como para los nav, ul, li y a una serie de reglas pero nosotros solo queremos que se apliquen para estos elementos
+si estos están en la cabecera de la página (header class=cabecera)*/
+.cabecera img{
+    width: 120px;
+    height: 50px;
+    float: left;
+    padding: 3px;
+ 
+}
+.cabecera nav{
+    float: right;
+    width: 70%; /* para que el menú no se ponga tanto a la derecha mejor definimos un ancho*/
+    margin-top: 1%;
+}
+.cabecera nav ul li{
+    list-style: none;
+    margin-left: 75px;
+    padding: 10 px 0;
+    /* float: left; 
+    para que los elementos del menú se coloque una al lado del otro lo único que tenemos es que indicar que es un elemento
+    inline no block que es lo que son todos los li*/
+    display: inline-block;
+}
+.cabecera nav ul li a{
+    text-decoration: none;
+    color: rgb(2, 2, 10);
+    font-weight: bold;
+}
+
+/* podemos poner un pequeño efecto empleando la pseudoclase css :hover la cual tiene lugar cuando pasamos sobre un
+elemento con el ratón, en nuestro caso será sobre los enlaces */
+.cabecera nav ul li a:hover, .cabecera nav ul li a#actual:hover{
+    background-color: rgba(0, 0, 255, 0.37);
+    padding: 10%;
+}
+
+/* resaltamos la opción del menú en la que estamos */
+.cabecera nav ul li a#actual{
+    background-color: rgba(0, 132, 255, 0.37);
+}
+
+
+/* MAIN */
+main{
+    width: 80%; /* para que no ocupe toda la ventana */
+    margin: 0 auto; /* centramos el contenido */
+}
+
+/* footer */
+footer{
+    width: 80%; /* para que no ocupe toda la ventana */
+    margin: 0 auto; /* centramos el contenido */
+    margin-top: 2%;
+}

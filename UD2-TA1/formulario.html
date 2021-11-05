@@ -11,12 +11,9 @@
 </head>
 
 <body>
-    <header>
-        <div class="cabecera">
-            <img src="imagenes/Logo.JPG" alt="Imagen del Logo">
-
-           
-
+    <header class="cabecera">
+        <!-- <div class="cabecera"> este si que sobra -->
+            <img src="./Logo.JPG" alt="Imagen del Logo">
             <nav>
                 <ul>
                     <li> <a href="index.html" target="self " aria-label=" Enlace a index.html">Inicio</a> </li>
@@ -26,16 +23,16 @@
                     </li>
                     <li><a href="contactos.html" target="self " aria-label=" Enlace a contactos.html">Contactos</a>
                     </li>
-                    <li><a href="formulario.html" target="self " aria-label=" Enlace a formulario.html">Alta</a> </li>
+                    <li><a href="formulario.html" id="actual" target="self " aria-label=" Enlace a formulario.html">Alta</a> </li>
                 </ul>
             </nav>
-
-            
-            
-        </div>
-        
-    </header>
-    <header>
+         
+        <!-- </div> -->
+     </header>
+     <!-- si quieres usar header otra vez, este debe estar dentro de una sección sea esta: main, article, section,..
+    voy a poner un main-->
+    <main>
+    <header class="titulos">
         
         <hgroup>
             <h1>iDESWEB</h1>
@@ -50,8 +47,9 @@
             <p>
                 <label for="nombre">Nombre *</label>
                 <input type="text" name="nombre" id="nombre" label="nombre"
-                placeholder="Juan" autofocus autocomplete required>
-
+                placeholder="Juan" pattern="[a-záéíóúüñ A-ZÁÉIÓÚÜÑ]{1,15}"  autofocus autocomplete required>
+<!-- te faltan las expresiones regulares como la que te he indicado para nombre
+tienes que ponerla para todos los campos que tienen un formato en concreto-->
 
                 <label for="apellidos">Apellidos* </label>
                 <input type="text" name="apellidos" id="apellidos" placeholder="Pérez" autofocus autocomplete required>
@@ -96,6 +94,27 @@
                 <input type="number" name="cp" id="cp">
             </p>
             <p>
+                <!-- para el pais mejor si agrupasmo
+                <label for="paises">País *</label>
+					<select id="paises" name="paises" required>
+						<option value="">Seleccione un país</option>
+						<optgroup label="Europa">
+							<option value="España">España</option>
+							<option value="Francia">Francia</option>
+							<option value="Italia">Italia</option>
+						</optgroup>
+						<optgroup label="America">
+							<option value="EEUU">Estados Unidos</option>
+							<option value="Mejico">Méjico</option>
+							<option value="Cuba">Cuba</option>
+						</optgroup>
+						<optgroup label="Asia">
+							<option value="India">India</option>
+							<option value="China">China</option>
+							<option value="Japon">Japón</option>
+						</optgroup>
+					</select>
+                -->
                 <label for="pais"> País </label>
                 <select name="pais" title="pais">
                     <option value="Elegir" id="EL">Elegir país</option>
@@ -384,6 +403,7 @@
             <input type="submit" value="Crear cuenta">
         </p>
     </form>
+</main>
     <footer class="pie-pagina">
     
         <div class="grupo-1">
