@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--DWI4Tarea
+    Autor: Cristina Pazo Paniagua
+Fecha 22/01/2022
+Nombre del fichero:1ndex.html-->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIW04 Deseño de interfaces web</title>
+    <link rel="stylesheet" href="estilo.css" type="text/css">
+ 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+		integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" /> -->
+
+</head>
+
+<body>
+    <header class="cabecera">
+        <section id="logo">
+            <h1><a href="#">TodoFP</a></h1>
+            <h2><a href="http/educacion,gob.es">www.educacion.gob.es</a></h2>
+        </section>
+        <nav id="menu">
+            <ul>
+                <li class="active"><a href="#" title="">Inicio</a></li>
+                <li><a href="#" title="">Informacion </a></li>
+                <li><a href="#" title="">Cursos</a></li>
+                <li><a href="#" title="">Alumnos</a></li>
+                <li><a href="#" title="">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="borde"></div>
+    <section class="container">
+        <main id="main" class="columna1">
+            <section id="welcome">
+                <header class="title caja">
+                    <h2><span>¡Bienvenido a TodoFP!</span></h2>
+                    <h3 class="date"><span class="month">Oct.</span><span class="day">10 </span><span
+                            class="year">2011</span></h3>
+                </header>
+                <div class="coment"><img src="./img/DIW04_SOL_TAR_R08.jpg" alt="logoFP" class="left">
+                    <p><strong>FP a distancia</strong> Esta oferta está dirigida especialmente a aquellas personas que,
+                        por diferentes razones (no solo laborales) no pueden cursar en los centros educativos, y en el
+                        horario presencial, la <a href="http://todofp.es/todofp">Formacion Profesional</a> Por tanto,
+                        mayoritariamente será; el colectivo de personas adultas el destinatario de esta modalidad
+                        de enseñanza.
+                        Toda la información desde la web:<a href="http://www.educacion.gob.es/fponline.html">FP
+                            online</a>.<em>¡¡Matricúlate!!</em></p>
+                </div>
+                <div class="meta">
+                    <p>Realizado por Manuel Vieites <a href="#">TodoFP</a> | <a href="#">Educación</a></p>
+                </div>
+            </section>
+            <section id="example" class="post">
+                <header class="title caja">
+                    <h2><span>DIW04.Hojas de estilos.</span></h2>
+                    <h3 class="date"><span class="month">Oct.</span><span class="day">10 </span><span
+                            class="year">2011</span></h3>
+                </header>
+                <article class="coment">
+                    <blockquote>
+                        <p>&ldquo;Orden EDU/2887/2010, de 2 de noviembre, por la que se establece el currículo del ciclo
+                            formativo de Grado Superior correspondiente al titulo de Téccnico Superior en Desarrollo de
+                            Aplicaciones Web.&ldquo;</p>
+                    </blockquote>
+                    <p>Técnicos, procedimientos y actitudes relacionados:</p>
+                    <ol>
+                        <li>Crear y vincular hojas de estilo</li>
+                        <li>Crear y vincular hojas de estilos en cascada externa </li>
+                    </ol>
+                    <p>Conceptos soporte relacionados: </p>
+                    <ol>
+                        <li>Estilos en liinea basados en etiquetas y clases</li>
+                        <li>Hojas de estilo auditivas</li>
+                        <li>Hojas de estilos para imprimir</li>
+                        <li>Herramientas y test de verificación</li>
+                    </ol>
+                </article>
+                <div class="meta">
+                    <p>Realizado por Manuel Vieites <a href="#">TodoFP</a> | <a href="#">Educación</a></p>
+                </div>
+            </section>
+        </main>
+        <!--fin columna1-->
+        <section id="barra lateral" class="columna2">
+            <div id="login">
+                <h2 class="title">Area de usuarios</h2>
+                <form id="form1"action="#" >
+                    <fieldset>
+                        <label for="usuario"><strong>ID de Usuario</strong> </label>
+                        <input  id="usuario"type="text" name="usuario" minlength="6" maxlength="8"
+                            placeholder="Introduce usuario de minimo seis " pattern= ^[a-zA-Z0-9.#$%&*_-]{0,4}]+(.){1}$ autofocus required/>
+                            <strong class="fa fa-check check-ok"></strong>
+                        <label for="contraseña"><strong>Contraseña</strong></label>
+                        <input id="contraseña" type="password" name="contraseña" minlength="8" maxlength="12" size="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^@$%*?&.]).{8,12}$" title="Contraseña minimo 8 maximo 12, al menos 1mayuscula, 1 miniscukas 1 simbolo " inputmode="verbatim" required>
+                        <strong class="fa fa-check check-ok"></strong>
+                        <input id="inputsubmit1" type="submit" name="inputsubmit1" value="Acceder">
+                        <p><a href="#">¿Olvidaste la contraseña?</a></p>
+                    </fieldset>
+                </form>
+
+            </div>
+            <section id="updates">
+                <div class="title">
+                    <h2>Unidades de trabajo</h2>
+                </div>
+                <ul>
+                    <li>
+                        <h3>DIW01. 2011</h3>
+                        <p><a href="#">Planificacion de interfaces gráficas. </a></p>
+                    </li>
+                    <li>
+                        <h3>DIW02. 2011</h3>
+                        <p><a href="#">Accesibilidad en la Web. </a></p>
+                    </li>
+                    <li>
+                        <h3>DIW03. 2011</h3>
+                        <p><a href="#">Usabilidad en la web. </a></p>
+                    </li>
+                    <li>
+                        <h3>DIW04. 2011</h3>
+                        <p><a href="#">Hojas de estilos</a></p>
+                    </li>
+                    <li>
+                        <h3>DIW05. 2011</h3>
+                        <p><a href="#">Contenidos multimedia en la Web Imagenes</a></p>
+                    </li>
+                </ul>
+            </section>
+        </section>
+            <!--final columna 2-->
+            <aside id="barra lateral2" class="columna3">
+                <div class="title">
+                    <h2>Webs de Interés</h2>
+                </div>
+                <nav class="content">
+                    <ul>
+                        <li><a href="#">TodoFP</a></li>
+                        <li><a href="#">FP online</a></li>
+                        <li><a href="#">Platega</a></li>
+                        <li><a href="#">IES San Clemente</a></li>
+                    </ul>
+                </nav>
+           
+                <div class="imagen"><a href="#"><img src="./img/DIW04_SOL_TAR_R00.jpg" alt="imagenpaisaje" ></a></div>
+            </aside>
+        </section>
+        <!--final columna 3-->
+
+        <footer id="footer" class="borde">
+            <p class="legal">Copyright &copy; 2011 TodoFP. Todos los derechos reservados. Diseñado por <a href="www.educacion.gob.es">www.educacion.gob.es</a></p>
+        </footer>
+
+</body>
+
+</html>

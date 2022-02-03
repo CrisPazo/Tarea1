@@ -1,0 +1,374 @@
+
+ /* 
+ Titulo: DWI4Tarea-Hoja de estilos
+ Autor: Cristina Pazo Paniagua
+ Fecha 22/01/2022
+ Nombre del fichero:estilos.css
+
+Tarea con flex y en columnas  */
+/*estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* variables para color de fondo del titulo, cabecera y menu*/
+:root{
+--color-fondo-titulo: #3c74e6;
+--color-fondo-cabecera: #cae646;
+--color-fondo-menu: #e58c24;
+}
+/*  body posicionado con flex, tipo de letra normal Arial Helvetica sans-serif, negra y separada por arriba 20px*/
+body{
+    max-width: 975px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background: #ffffff;
+    font: normal   Arial, Helvetica, sans-serif;
+    color: #666666;
+    margin-top: 20px;
+}
+/* Color de los titulas*/
+h1,h2,h3{
+    color: #333333;
+}
+p,blockquote,ul,ol{
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+blockquote{
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 1.5em;
+    font-style: italic;
+    text-align: justify;
+    line-height: 1.5em;
+}
+ul, ol{
+    margin-left: 3em;
+}
+/* Enlaces de color verde al pasar por encima,sombra gris y color naranja naranja y al ser visitados en rojo*/
+a{
+    text-decoration: underline;
+    color: #3e9722;
+    
+}
+a:hover{
+    text-decoration: none;
+    color: #e58c24;
+     background-color: rgb(189, 205, 221);
+        
+    }
+    
+ a:visited{
+        color: rgba(230, 17, 17, 0.63);
+    }
+
+img {
+    border: none;
+    }
+    /* Linea Borde de la cabecera*/
+    .borde{
+        padding: 20px;
+        margin-top: 5px 10px;
+        border-top-style: solid;
+        border-top-color:var(--color-fondo-cabecera) ;
+        border-top-width: 2px;
+        border-radius: 30px 30px 0 0 ;
+        border-left: 2px solid var(--color-fondo-cabecera);
+        border-right: 2px solid var(--color-fondo-cabecera);
+        box-shadow: 0.5px -2px 0px 0px var(--color-fondo-cabecera);
+        height: 70px;
+        width: 100%;
+    }
+    img.left{
+        margin: 5px 20px 0 0;
+        float: left;
+    }
+    img.right{
+        margin: 5px 0 0 20px ;
+        float: right;
+    }
+    /*caja*/
+    /*titulos de toda la pagina*/
+    .title{
+        background: var(--color-fondo-titulo);
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin: 0 auto;
+
+    }
+    .title h2, h2.title {
+        text-transform: uppercase;
+        font-size: 1em;
+        color: #ffffff;
+        padding: 10px 0;
+    }
+    .caja{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        color: #ffffff;
+        width: 99%;
+        padding: 0 10px;
+    }
+    .content{
+        padding:  20px;
+    }
+    .date{
+        font-size: x-small;
+        text-align: center;
+        color: #ffffff;
+    }
+    .meta p{
+        margin: 0;
+        padding: 10px 20px 40px 20px;
+        border-top: 1px dotted #cccccc;
+        line-height: normal;
+        font-size: small;
+    }
+    /*Header*/
+    header.cabecera{
+        width: 100%;
+        height: 20vh;
+        min-height: 120px;
+        margin: 0 auto;
+        padding: 0 20px 5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background: var(--color-fondo-cabecera) ;
+        background: -prefix-linear-gradient(top, var(--color-fondo-cabecera), #ffffff  );
+        background: linear-gradient( to bottom, var(--color-fondo-cabecera), #ffffff  );
+        border-top-left-radius: 40px  40px;
+        border-top-right-radius: 40px 40px;
+    
+    }
+    header #logo{
+        margin-left: 20px;
+        max-width: 240px;
+    }
+    
+    header #logo h1{
+        margin: 0;
+        font-size: 2,6em;
+    }
+    header #logo h2{
+          font-size: 1em;
+    }
+    header #logo a{
+        text-decoration: none;
+        color: #333333;
+  }
+  /*Cabecera del menu*/
+  #menu ul{
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      list-style: none
+  }
+  #menu li{
+      display: inline;
+      height: 100%;
+  }
+  #menu a{
+      display: block;
+      width: 120px;
+      height: 30px;
+      margin-left: 2px;
+      padding: 10px 5px;
+      font-size: 0.8rem;
+      margin-left: 2px;
+      background-color: #d9ebd6;
+      border-radius: 15%;
+      text-decoration:none;
+      text-align: center;
+      font-weight: bold;
+      color: #333333;
+     }
+  #menu a:hover{
+      background: -prefix-linear-gradient(to right, var(--color-fondo-menu), white 50%, var(--color-fondo-menu));
+      background: linear-gradient(to right, var(--color-fondo-menu), white 50%, var(--color-fondo-menu));
+      background-color: var(--color-fondo-menu);
+  }
+  #menu ul li .active a {
+      background-color: #e58c24;
+
+  }
+  /*Contenido*/
+  .container{
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow:row wrap;
+      flex-flow: row wrap;
+      top: -50px;
+      position: relative;
+      padding: 0 20px;
+     }
+     .columna1, .columna2, .columna3{
+         width: 100%;
+     }
+     .coment{
+         margin: 20px;
+     }
+     /**/
+
+/*Content-barra lateral-columna1*/
+#login fieldset{
+    border: none;
+    }
+#login legend{
+    border: none;
+}
+#login label{
+    display: block;
+    margin-top: 10px;
+    
+}
+#login input{
+    margin-bottom: 10px;
+    padding: 2px 5px;
+    font: normal small ,Arial, Helvetica, sans-serif;
+    color: #666666;
+}
+#usuario,#contraseña{
+    width: 80%;
+
+}
+#inputsubmit1 {
+    margin: 0;
+    padding: 0;
+
+}
+/* chequear campos válidos */
+
+.check-ok {
+	display: none; /* por defecto no es visible*/
+}
+   
+input:invalid ~ .check-ok {
+    color: rgb(211, 27, 21); /* cuando el campo sea inválido se pone rojo*/
+}
+   
+input:valid ~ .check-ok {
+    color: rgb(9, 100, 9); /* cuando el campo sea valido se pone verde */
+} 
+ 
+
+/* Content>barra lateral>updates-columna2 */
+#updates ul{
+    margin: 0;
+    list-style: none;
+}
+#updates h3{
+    font-size: 0.9em;
+}
+#updates p{
+    line-height: normal;
+    font-size: 0.9em;
+}
+#updates a{
+    text-decoration: none;
+
+}
+
+/* Content>barra lateral>updates-columna3 */
+aside{
+    text-align: center;
+}
+aside ul{
+    margin-left: 0;
+    padding-left: 0;
+    list-style: inside;
+}
+.imagen{
+    display: none;
+}
+
+/* footer-Pie*/
+footer{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    line-height: normal;
+    font-size: x-small;
+}
+footer a{
+    text-decoration: underline;
+    color: #666666;
+}
+footer a:hover{
+    text-decoration: none;
+}
+/*Media Querie*/
+@media(min-width:600px){
+    .container{
+        margin: 0 auto;
+    }
+    .columna1 {
+        width: 60%;
+        -webkit-order: 2;
+        order: 2;
+    }
+    .columna2 {
+        width: 20%;
+        -webkit-order: 1;
+        order: 1;
+    }
+    .columna3 {
+        width: 20%;
+        -webkit-order: 3;
+        order: 3;
+    }
+    header.cabecera{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    #menu ul{
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: flex-end;
+        list-style: none;
+    }
+    #menu a{
+        display: block;
+        max-width: 120px;
+        height: 40px;
+        margin-left: 2px;
+        padding-top: 10%;
+        font-size: 1rem;
+        background-color: #f7f7f7;
+        border-radius: inherit;
+        border-top-left-radius: 10px 10px;
+        border-top-right-radius: 10px 10px;
+    }
+    .imagen{
+        display: inline;
+    }
+    @media(min-widht :800px){
+        .columna2, .columna3{
+            width:20%;
+        }
+    }
+}
