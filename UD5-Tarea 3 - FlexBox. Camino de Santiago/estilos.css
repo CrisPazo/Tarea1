@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Roboto Slab, " Georgia, "Times New Roman", Times, serif;
+}
+a {
+  text-decoration: none;
+  font-size: 1.1vw;
+  color: #dc7c1d;
+}
+a:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
+body {
+  display: flex;
+  flex-flow: wrap;
+  width: 100vw;
+  height: 100vw;
+  background-image: url(./imagenes/imagenes/Catedral_de_santiago.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+}
+/*Cabecera*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding-top: 1%;
+  padding-left: 2%;
+  text-align: center;
+  background-color: rgba(220, 125, 29);
+  color: #ffffff;
+  opacity: 0.6;
+}
+header h1 {
+  font-family: "Roboto Slab, " Georgia, "Times New Roman", Times, serif;
+  width: 100€;
+  font-size: 3vw;
+}
+/*main*/
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+  width: 100%;
+}
+figure.figuraruta {
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  max-width: 310px;
+  max-height: 220px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+figure.figuraruta * {
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+}
+figure.figuraruta img {
+  max-width: 100%;
+  position: relative;
+  opacity: 0.4;
+}
+
+figure.figuraruta figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+figure.figuraruta h2 {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 50%;
+  display: inline-block;
+  background: #000000;
+  opacity: 0.8;
+  transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
+  padding: 12px 5px;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+figure.figuraruta h2 span {
+  font-weight: 800;
+}
+figure.figuraruta.azul {
+  background: #123851;
+}
+figure.figuraruta.azul h2 {
+  background: #0a212f;
+}
+figure.figuraruta.rojo {
+  background: #581a14;
+}
+figure.figuraruta.rojo h2 {
+  background: #36100c;
+}
+figure.figuraruta.amarilo {
+  background: #7f5006;
+}
+figure.figuraruta.amarilo h2 {
+  background: #583804;
+}
+figure.figuraruta.verde {
+  background: #083616;
+}
+figure.figuraruta.verde h2 {
+  background: #083616;
+}
+figure.figuraruta.violeta {
+  background: #2b0836;
+}
+figure.figuraruta.violeta h2 {
+  background: #2b0836;
+}
+figure.figuraruta::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(110deg) translateY(-50%);
+}
+figure.figuraruta a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+figure.figuraruta:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+figure.figuraruta:hover h2 {
+  transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+  -webkit-transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+  -moz-transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+  -o-transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+}
+/*Contenedor Modo*/
+section#contModos {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.76);
+  width: 100%;
+  margin: 2% 0;
+}
+section#contModos h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  color: #ffffff;
+  display: block;
+}
+figure.modos {
+  width: auto;
+  height: auto;
+  display: inline;
+  vertical-align: middle;
+  text-align: center;
+}
+figure.modos p {
+  font-family: "Roboto Slab, " Georgia, "Times New Roman", Times, serif;
+  color: #dc7c1d;
+}
+figure.modos p:hover {
+  color: #ffffff;
+}
+figure.modos img {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  display: inline;
+}
+figure.modos img:hover {
+  transform: scale(1.2);
+}
+/*Pie*/
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  font-size: 1.1vw;
+  margin: 0;
+  padding: 0%;
+  background-color: rgba(220, 125, 29);
+  color: #ffffff;
+  opacity: 0.6;
+}
