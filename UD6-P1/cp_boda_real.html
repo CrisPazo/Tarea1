@@ -21,7 +21,7 @@
     <link href="css/cp_base.css" rel="stylesheet" />
     <link href="css/cp_styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/cp_media.css">
-    
+
 
 
 </head>
@@ -107,17 +107,18 @@
             </p>
             <p>El mayor logro musical de Lane puede ser su descubrimiento de una niña de 11 años llamada Frances Gumm, a
                 quien el mundo conoce ahora como Judy Garland.</p>
-            <p>Haga die en el bot6n de reproducci6n de abajo para escuchar la obertura musical para la <cite>Boda
+            <p>Haga die en el botón de reproducción de abajo para escuchar la obertura musical para la <cite>Boda
                     Real</cite> de Burton Lane.
             </p>
             <audio controls>
                 <source src="./audio/cp_overture.mp3" type="audio/mp3" />
                 <source src="./audio/cp_overture.ogg" type="audio/ogg" />
-              
-                
-
+                <!--Te falta la alternativa para navegadores que no soporten html5 y por tanto necesiten el plugin de reproducción-->
+                <embed src="audio/cp_overture.mp3" width="250" height="50" controller="yes" autoplay="no"
+                    showcontrols="yes" autostart="no" />
+                <p><em>Para reproducir este clip de audio, su navegador debe soportar HTML5.</em></p>
             </audio>
-            <p><em>Para reproducir este clip de audio, su navegador debe soportar HTMLS.</em></p>
+            <!-- esto se mete dentro del audio y cuano el navegador no soporta la reproducción pone el mensaje <p><em>Para reproducir este clip de audio, su navegador debe soportar HTMLS.</em></p> -->
 
         </aside>
 
@@ -130,22 +131,28 @@
                 ilusión de ingravidez.</p>
             <p>Haga clic en el bot6n de reproducci6n para ver esta clasica secuencia.</p>
             <video controls poster="./img/cp_photo2.png">
-                <video src="mivideo.webm" controls poster="mivide"></video>
+                <!-- <video src="mivideo.webm" controls poster="mivide"></video> -->
                 <source src="./video/cp dance.mp4" type="video/mp4" />
                 <source src="./video/cp_dance.webm" type="video/webm" />
                 <p><em>Para reproducir este videoclip, su navegador debe soportar HTMLS.</em></p>
 
-                <track kind="captions" src="video/cp_captions.vtt" label=" Captions" />
-                <track kind="chapters" src="chapters.vtt" label="Chapters" />
+                <track kind="captions" src="video/cp_captions.vtt" label="Caption" srclang="es" default />
+                <!-- <track kind="chapters" src="chapters.vtt" label="Chapters" />
                 <track kind="subtitles" src="video/english.vtt" srclang="en" />
                 <track kind="subtitles" src="video/french.vtt" srclang="fr" />
                 <track kind="subtitles" src="video/spanish.vtt" srclang="es" default />
-                <track kind="subtitles" src="video/german.vtt" srclang="gr" />
+                <track kind="subtitles" src="video/german.vtt" srclang="gr" /> 
+            Son todos captions, ya que los captions son breves descripciones de texto sincronizadas con puntos de tiempo especificados dentro del clip multimedia; diseñado para usuarios con problemas de audición
+ -->
+                <track kind="captions" src="video/cp_captions_fr.vtt" label="Legend" srclang="fr" />
+                <track kind="captions" src="video/cp_captions_en.vtt" label="Caption" srclang="en" />
+                <track kind="captions" src="video/cp_captions_de.vtt" label="Bildunterschrift" srclang="de" />
+
 
             </video>
 
 
-            <p><em>Para reproducir este videoclip, su navegador debe soportar HTMLS.</em></p>
+            <!-- <p><em>Para reproducir este videoclip, su navegador debe soportar HTMLS.</em></p> -->
             </video>
 
 
