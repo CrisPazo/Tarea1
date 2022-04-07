@@ -14,18 +14,31 @@
 */
 
 /* Estilos de transición */
-nav#topLinks a{
+nav#topLinks a {
    color: rgb(255, 255, 255);
    font-size: 1em;
    letter-spacing: 0em;
    text-shadow: 1px -1px 1px rgba(0, 0, 0, 1);
-   transition: color 1.5s ease-in 0.5s, font-size 2s ease, letter-spacing 2s ease-out, text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
-   -o-transition: color 1.5s ease-in 0.5s, font-size 2s ease, letter-spacing 2s ease-out, text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
-   -moz-transition: color 1.5s ease-in 0.5s, font-size 2s ease, letter-spacing 2s ease-out, text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);  -webkit-transition: color 1.5s ease-in 0.5s;
-   
-
+   transition: color 1.5s ease-in 0.5s,
+               font-size 2s ease, 
+               letter-spacing 2s ease-out, 
+               text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
+   -o-transition: color 1.5s ease-in 0.5s,
+               font-size 2s ease, 
+               letter-spacing 2s ease-out, 
+               text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
+   -moz-transition: color 1.5s ease-in 0.5s, 
+               font-size 2s ease, 
+               letter-spacing 2s ease-out, 
+               text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
+   /* -webkit-transition: color 1.5s ease-in 0.5s; */
+   -webkit-transition: color 1.5s ease-in 0.5s,
+               font-size 2s ease,
+               letter-spacing 2s ease-out,
+               text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
 }
-nav#topLinks a:hover{
+
+nav#topLinks a:hover {
    color: rgb(255, 183, 25);
    font-size: 3em;
    letter-spacing: 0.1em;
@@ -35,28 +48,66 @@ nav#topLinks a:hover{
 
 /* Estilos de fotogramas clave */
 @keyframes spin {
-   0% {transform: rotate(0deg);}
-   23% {transform: rotate(0deg);}
-   28% {transform: rotate(90deg);}
-   39% {transform: rotate(90deg);}
-   42% {transform: rotate(180deg);}
-   68% {transform: rotate(180deg);}
-   72% {transform: rotate(270deg);}
-   90% {transform: rotate(270deg);}
-   94% {transform: rotate(360deg);}
-   100% {transform: rotate(360deg);}
+   0% {
+      transform: rotate(0deg);
+   }
+
+   23% {
+      transform: rotate(0deg);
+   }
+
+   28% {
+      transform: rotate(90deg);
+   }
+
+   39% {
+      transform: rotate(90deg);
+   }
+
+   42% {
+      transform: rotate(180deg);
+   }
+
+   68% {
+      transform: rotate(180deg);
+   }
+
+   72% {
+      transform: rotate(270deg);
+   }
+
+   90% {
+      transform: rotate(270deg);
+   }
+
+   94% {
+      transform: rotate(360deg);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
 }
+
 video {
-   -o-animation:spin 104.04s linear infinite ;
+   -o-animation: spin 104.04s linear infinite;
    -moz-animation: spin 104.04s linear infinite;
    -webkit-animation: spin 104.04s linear infinite;
    animation: spin 104.04s linear infinite;
 }
+
 input#rotarVideo:checked~video {
+   -o-animation-play-state: running;
    animation-play-state: running;
+   -moz-animation-play-state: running;
+   -webkit-animation-play-state: running;
 }
-input#rotarVideo:not(:checked) ~video {
+
+input#rotarVideo:not(:checked)~video {
+   -o-animation-play-state: paused;
    animation-play-state: paused;
+   -moz-animation-play-state: paused;
+   -webkit-animation-play-state: paused;
 }
 
 
@@ -69,9 +120,11 @@ input#rotarVideo:not(:checked) ~video {
 input#rotarVideo {
    display: none;
 }
+
 input#rotarVideo:checked+label::after {
    content: "\270b";
 }
+
 input#rotarVideo:not(:checked)+label::after {
    content: "\21bb";
 }
